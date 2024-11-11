@@ -1,0 +1,119 @@
+
+//
+// choices
+//
+
+.choices__inner{
+  padding: 0.25rem ($form-select-padding-x + $form-select-indicator-padding) 0.25rem 0.5rem;
+  background-color: $form-select-bg;
+  vertical-align: middle;
+  border-radius: $form-select-border-radius;
+  border: $form-select-border-width solid $form-select-border-color;
+  min-height: 38px;
+
+}
+.choices__heading{
+  border-bottom-color: var(--#{$prefix}border-color) !important;
+}
+
+
+.choices[data-type*=select-one]{
+  .choices__inner{
+    padding-bottom: 0.25rem;
+  }
+
+  &:after{
+    border: 0;
+    border-color: var(--#{$prefix}border-color) transparent transparent;
+    right: 11.5px;
+    left: auto;
+    content: "\F0140";
+    font-family: 'Material Design Icons';
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  } 
+
+  &.is-open:after{
+    margin-top: 0;
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+  .choices__button{
+    right: 0;
+    left: auto;
+    margin-right: 25px;
+    margin-left: 0;
+  }
+}
+
+.choices__input{
+  background-color: $input-bg;
+  margin-bottom: 0;
+}
+
+.choices__list--multiple{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  .choices__item{
+    background-color: $primary;
+    border-color: $primary;
+    margin-bottom: 0;
+    margin-right: 0;
+    font-weight: $font-weight-normal;
+    &.is-highlighted{
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+}
+
+.choices.is-disabled {
+  .choices__inner, .choices__input{
+    background-color: var(--#{$prefix}secondary-bg);
+  }
+}
+
+.is-open, .is-focused{
+  .choices__inner{
+    border-color: $input-focus-border-color;
+  }
+}
+
+.is-disabled .choices__list--multiple {
+  .choices__item{
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+}
+
+.choices[data-type*=select-multiple], .choices[data-type*=text]{
+  .choices__button{
+    border-left: 1px solid rgba($white, 0.5);
+    margin: 0 -4px 0 8px;
+    border-right: 0;
+  }
+}
+
+.choices__list--dropdown{
+  background-color: $dropdown-bg !important;
+  border-color: $dropdown-border-color !important;
+  box-shadow: var(--#{$prefix}box-shadow)!important;
+  .choices__item--selectable.is-highlighted{
+    background-color: $dropdown-link-hover-bg !important;
+  }
+}
+
+.is-open{
+  .choices__list--dropdown{
+    border-color: $dropdown-border-color !important;
+  }
+}
+
+.choices[data-type*=select-one] .choices__input{
+  background-color: var(--#{$prefix}secondary-bg) !important;
+  border-bottom-color: var(--#{$prefix}border-color) !important;
+}

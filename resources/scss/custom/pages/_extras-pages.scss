@@ -1,0 +1,222 @@
+// 
+// Extras pages.scss
+//
+
+
+// Gallery
+
+.categories-filter {
+    .list-inline-item    {
+        position: relative;
+        margin-right: 0;
+        a {
+            display: block;
+            color: $body-color;
+            font-weight: $font-weight-semibold;
+            padding: 8px 15px;
+            margin: 7px;
+            cursor: pointer;
+            border-radius: 4px;
+            &.active{
+                color: $primary;
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $text-muted;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -2px;
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
+
+
+.gallery-box{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid $border-color;
+
+    .gallery-container{
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px 4px 0px 0px;
+
+        a{
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            opacity: 0;
+            background: rgba($primary, 0.2);
+            visibility: hidden;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out 0s;
+
+            .overlay-caption{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    .gallery-img {
+        transition: all 0.2s ease-in-out;
+    }
+    .box-content{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -28px;
+        background-color: $card-bg;
+        transition: all 0.2s;
+
+        .title{
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .post{
+            margin: 0;
+            opacity: 0;
+            transition: all 0.2s;
+            color: $text-muted;
+        }
+    }
+
+    &:hover {
+
+        .box-content{
+            bottom: 0;
+
+            .post {
+                opacity: 1;
+            }
+        }
+        .gallery-img {
+            transform: translateY(-28px);
+        }
+        .gallery-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+// pricing
+
+.pricing-badge {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    right: 0;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+    .badge {
+      float: right;
+      transform: rotate(45deg);
+      right: -67px;
+      top: 17px;
+      position: relative;
+      text-align: center;
+      width: 200px;
+      font-size: 13px;
+      margin: 0;
+      padding: 7px 10px;
+      font-weight: 500;
+      color: $white;
+      background: $primary;
+    }
+}
+
+
+
+// FAQ
+.faq-icon{
+    i{
+        font-size: 80px;
+        position: absolute;
+        margin-top: -30px;
+        right: -20px;
+        opacity: .2;
+    }
+}
+
+// profile
+
+.profile-bg{
+    height: 210px;
+    background-image: url("../images/profile-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// pricing
+
+.pricing-box{
+    border-top: 2px solid $primary;
+
+    .pricing-features{
+        color: $text-muted;
+        li{
+            padding: 4px 0;
+        }
+    }
+}
+
+// error
+
+// Error Page
+
+.error-title {
+    font-size: 180px;
+    text-shadow: 9px 0px $primary;
+    @media (max-width: 425px) {
+      font-size: 150px;
+    }
+  }
+  
+
+// body[data-bs-theme="dark"] {
+
+//     .categories-filter{
+//         .list-inline-item{
+//             a{
+//                 color: $gray-dark-500;
+//                 &.active{
+//                     color: $primary;
+//                 }
+//             }
+//         }
+//     }
+
+//     .gallery-box .box-content{
+//         background-color: $gray-dark-200;
+//     }
+// }

@@ -1,0 +1,24 @@
+// 
+// projects.scss
+//
+
+// project list
+
+.project-list-table{
+    border-collapse:separate; 
+    border-spacing:0 12px; 
+  tr{
+    background-color: $card-bg;
+  }
+}
+
+
+// body[data-bs-theme="dark"] {
+//   .project-list-table{
+//     border-collapse:separate; 
+//     border-spacing:0 12px; 
+//   tr{
+//     background-color: $gray-dark-200;
+//   }
+// }
+// }

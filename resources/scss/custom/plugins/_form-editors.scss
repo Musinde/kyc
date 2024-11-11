@@ -1,0 +1,189 @@
+//
+// Form editors.scss
+//
+
+// CK Editor
+.ck {
+  &.ck-toolbar {
+      background-color: var(--#{$prefix}tertiary-bg) !important;
+      border: 1px solid $input-border-color !important;
+
+      &.ck-toolbar_grouping > .ck-toolbar__items {
+          flex-wrap: wrap !important;
+      }
+
+      .ck.ck-toolbar__separator {
+          background: transparent !important;
+      }
+  }
+
+  &.ck-editor__main > .ck-editor__editable {
+      border-top: 0 !important;
+      background-color: $card-bg !important;
+      border-color: $input-border-color !important;
+      box-shadow: var(--#{$prefix}box-shadow)   !important;
+  }
+
+  &.ck-dropdown__panel,
+  &.ck-list {
+      background: $dropdown-bg !important;
+      border: 1px solid $dropdown-border-color !important;
+      box-shadow: var(--#{$prefix}box-shadow) !important;
+  }
+
+  &.ck-reset_all,
+  &.ck-reset_all * {
+      color: var(--#{$prefix}body-color) !important;
+  }
+
+  &.ck-dropdown {
+      .ck-dropdown__panel {
+          &.ck-dropdown__panel_ne,
+          &.ck-dropdown__panel_se {
+              left: 0;
+              right: auto !important;
+          }
+      }
+  }
+
+  &.ck-editor__editable_inline {
+      &[dir="rtl"] {
+          text-align: left !important;
+      }
+  }
+}
+
+.ck-editor__editable {
+  min-height: 245px !important;
+}
+
+.ck,
+a.ck {
+  &.ck-button {
+      &.ck-on:not(.ck-disabled) {
+          &:hover,
+          &:active {
+              background: var(--#{$prefix}tertiary-bg) !important;
+              box-shadow: none !important;
+          }
+      }
+
+      &:focus,
+      &:active {
+          background: var(--#{$prefix}tertiary-bg) !important;
+          border-color: var(--#{$prefix}border-color) !important;
+      }
+  }
+}
+
+.ck.ck-tooltip .ck-tooltip__text {
+  background: $dark !important;
+  color: var(--#{$prefix}body-color) !important;
+}
+
+.ck.ck-toolbar .ck.ck-button.ck-on,
+a.ck.ck-button.ck-on,
+.ck.ck-button:not(.ck-disabled):hover,
+a.ck.ck-button:not(.ck-disabled):hover {
+  background: var(--#{$prefix}tertiary-bg) !important;
+}
+
+.ck.ck-list__item .ck-button .ck-button__label{
+ font-family: "Work Sans",sans-serif;
+}
+
+[dir="rtl"]{
+  .ck.ck-toolbar>.ck-toolbar__items{
+    flex-direction: row-reverse;
+  }
+}
+
+
+//
+// quilljs-editor.scss
+//
+ 
+.ql-editor{
+  text-align: left;
+  ol, ul{
+    padding-left: 1.5em;
+    padding-right: 0;
+  }
+
+  li:not(.ql-direction-rtl)::before{
+    margin-left: -1.5em;
+    margin-right: 0.3em;
+    text-align: right;
+  }
+}
+
+.ql-container {
+  font-family: $font-family-base;
+
+  &.ql-snow {
+      border-color: $input-border-color;
+  }
+}
+
+.ql-bubble {
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+}
+
+.ql-toolbar {
+  font-family: $font-family-base !important;
+  span {
+      outline: none !important;
+      color: $dropdown-link-color;
+
+      &:hover {
+          color: $primary !important;
+      }
+  }
+
+  &.ql-snow {
+      border-color: $input-border-color;
+
+      .ql-picker.ql-expanded {
+          .ql-picker-label {
+              border-color: transparent;
+          }
+      }
+
+      .ql-picker-options{
+        box-shadow: $dropdown-box-shadow;
+        border-radius: $dropdown-border-radius;
+      }
+  }
+}
+
+.ql-snow {
+  .ql-stroke,
+  .ql-script,
+  .ql-strike svg {
+      stroke: $dropdown-link-color;
+  }
+  .ql-fill {
+      fill: $dropdown-link-color;
+  }
+
+  .ql-picker:not(.ql-color-picker):not(.ql-icon-picker){
+    svg{
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .ql-picker{
+    &.ql-expanded .ql-picker-label{
+      color: $dropdown-link-color;
+    }
+  }
+}
+
+.ql-snow {
+  .ql-picker-options {
+      background-color: $dropdown-bg;
+      border-color: $dropdown-border-color !important;
+  }
+}

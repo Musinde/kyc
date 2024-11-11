@@ -1,0 +1,38 @@
+// 
+// _footer.scss
+// 
+
+.footer {
+    bottom: 0;
+    padding: 20px calc(#{$grid-gutter-width} / 2);
+    position: absolute;
+    right: 0;
+    color: var(--#{$prefix}body-color);
+    left: $sidebar-width;
+    height: 60px;
+    background-color: $card-bg;
+    border-top: $card-border-width solid $card-border-color;
+    box-shadow: var(--#{$prefix}box-shadow);
+    .container-fluid{
+        width: 98%;
+    }
+}
+  
+@media (max-width: 992px) {
+    .footer {
+        left: 0;
+    }
+}
+
+// Enlarge menu
+body[data-sidebar-size="sm"] {
+    .footer {
+        left: $sidebar-collapsed-width;
+    }
+}
+
+body[data-layout="horizontal"] {
+    .footer {
+        left: 0 !important;
+    }  
+}

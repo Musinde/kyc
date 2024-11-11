@@ -1,0 +1,154 @@
+// 
+// Datatables.scss
+// 
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+}
+
+// gridjs-table
+
+.gridjs-container{
+  color: $table-color;
+}
+
+.gridjs-head{
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.gridjs-wrapper{
+  box-shadow: none;
+  border: none;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+  &::-webkit-scrollbar:vertical {
+      width: 12px;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+      height: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: rgba($dark, .075);
+      border-radius: 10px;
+      border: 2px solid var(--#{$prefix}border-color);
+  }
+
+  &::-webkit-scrollbar-track {
+      border-radius: 10px;  
+      background-color: var(--#{$prefix}secondary-bg); 
+  }
+}
+
+.gridjs-table{
+  width: 100%;
+}
+
+th.gridjs-th, 
+td.gridjs-td{
+  border: 0px solid var(--#{$prefix}border-color);
+  border-bottom-width: 1px;
+  padding: .75rem .75rem;;
+}
+
+th{
+  &.gridjs-th{
+    border-top: 0;
+    color: $table-color;
+    background-color: $table-head-bg;
+
+  }
+
+  &.gridjs-th-sort{
+    &:focus, &:hover{
+      background-color: var(--#{$prefix}secondary-bg);
+    }
+  }
+}
+
+.gridjs-footer{
+  box-shadow: none;
+  border: none;
+  border-top: 0;
+}
+
+.gridjs-pagination{
+  color: $pagination-color;
+
+  .gridjs-pages button{
+    border: none !important;
+    border-radius: 30px!important;
+    margin: 0 5px;
+    border: none;
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
+    text-align: center;
+    line-height: 32px;
+
+    
+
+    &:disabled, 
+    &:hover:disabled, 
+    &[disabled]{
+      color: $pagination-disabled-color;
+    }
+
+    &:hover{
+      background-color: $pagination-hover-bg;
+      color: $pagination-hover-color;
+    }
+
+    &:focus{
+      box-shadow: none;
+      margin: 0 5px !important;
+    }
+
+    &:last-child, &:first-child{
+      &:hover{
+        background-color: transparent;
+      }
+    }
+    &.gridjs-currentPage{
+      background-color: $pagination-active-bg;
+      color: $pagination-active-color;
+      font-weight: 500;
+      border-color: $pagination-active-border-color;
+    }
+  }
+}
+
+input.gridjs-input{
+  border-color: $input-border-color;
+  background-color: $input-bg;
+  color: $input-color;
+  font-size: 13px;
+  border-radius: 30px;
+  &:focus{
+    box-shadow: none;
+    border-color: $input-focus-border-color;
+    background-color: $input-focus-bg;
+  }
+}
+
+.gridjs-tbody, td.gridjs-td {
+     background-color: var(--#{$prefix}secondary-bg) !important;
+}
+
+.gridjs-footer{
+  background: var(--#{$prefix}secondary-bg);
+}
+
+.gridjs-pagination .gridjs-pages button{
+  background-color: var(--#{$prefix}pagination-bg);
+}
+
+.gridjs-pagination .gridjs-pages button[disabled]{
+  background-color: var(--#{$prefix}pagination-disabled-bg);
+}

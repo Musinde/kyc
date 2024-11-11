@@ -1,0 +1,116 @@
+// 
+// _widgets.scss
+// 
+
+// popular product
+
+.popular-product-box{
+    padding: 12px 15px;
+    background-color: var(--#{$prefix}tertiary-bg);
+}
+
+// Loyal Customers
+.loyal-customers-box{
+    padding: 11px 0px;
+}
+
+// Sale Social
+.sale-social-box{
+    padding: 15px 0px;
+}
+
+.sales-history{
+    padding: 12px 0px;
+}
+
+.popular-product-img{
+    img{
+        height: 200px;
+        @media (min-width: 1440px) and (max-width: 1550px) { 
+            max-width: 100%;
+            height: auto;          
+        }
+    }
+  
+}
+
+
+.main-chart {
+    .chart-border-left {
+        border-left: 1.4px solid var(--#{$prefix}border-color);
+        padding: 0px 20px;
+
+        @media (max-width: 575.98px) {
+            padding: 0px 0px;
+            border: 0;
+            &:last-child{
+                padding-left: 15px;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.widget-chat{
+    height: 331px !important;
+}
+
+.widget-chat-list{
+    height: 400px !important;
+}
+
+// Transactions
+
+.transactions-contain{
+    padding: 14px 16px;
+}
+
+
+.swiper-location-widget{
+    height: 276px;
+    .swiper-slide{
+        .card{
+            margin: 0;
+            box-shadow: none;
+            height: 100%;
+            
+            .card-body{
+                padding: 0.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// map widget
+.map-widget{
+    @media (min-width: 992px) {
+        border-right: 1px solid var(--#{$prefix}border-color);
+    }
+}
+
+// body[data-bs-theme="dark"] {
+
+//     .popular-product-box{
+//         background-color: $gray-dark-300;
+    
+//     }
+
+//     .main-chart{
+//         .chart-border-left{
+//             border-left: 1.4px solid $gray-dark-300;
+//         }
+//     }
+
+//     // map widget
+//     .map-widget{
+//         @media (min-width: 992px) {
+//             border-right: 1px solid $gray-dark-300;
+//         }
+//     }
+// }

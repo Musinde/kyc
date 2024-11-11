@@ -1,0 +1,39 @@
+//
+// lightbox.scss
+//
+
+.glightbox-clean {
+    .gslide-title {
+        font-family: $font-family-secondary;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .gslide-desc {
+        font-family: $font-family-base;
+        font-size: 14px;
+    }
+
+    .gslide-description {
+        background: var(--#{$prefix}secondary-bg);
+
+        .gslide-title{
+            color: var(--#{$prefix}heading-color);
+        }
+    }
+
+    .gclose {
+        border: 2px solid var(--#{$prefix}border-color);
+        border-radius: 7px;
+        right: 10px;
+        left: auto;
+        @media (min-width: 992px) {
+            right: 20px;
+            left: auto;
+        }
+        svg {
+            width: 12px;
+        }
+    }
+}

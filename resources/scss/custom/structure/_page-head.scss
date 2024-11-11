@@ -1,0 +1,60 @@
+// 
+// Page-title
+// 
+
+.page-title-box {
+     padding: 0 0.75rem;
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    h4 {
+        font-size: 21px!important;
+    }
+
+    .page-title-right{
+        @media (max-width: 575.98px) {
+            display: none;
+        }
+    }
+}
+
+.page-title{
+    font-size: 20px;
+    margin: 0;
+}
+
+
+// body[data-topbar="dark"] {
+
+//     .breadcrumb-item>a {
+//         color: $gray-dark-600;
+//     }
+
+//     .breadcrumb-item.active{
+//         color: $gray-dark-400;
+//     }
+//     .page-title {
+//         color:  $gray-dark-600;
+//     }
+// }
+
+// body[data-bs-theme="dark"] {
+//     .page-title {
+//         color:  $gray-dark-600;
+//         }
+
+//         &[data-topbar="light"] {
+
+//             .noti-icon {
+//                 .noti-dot{
+//                     box-shadow: 0 0 0 3px $header-bg;
+//                 }
+//             }
+//             .page-title{
+//                 color: $header-item-color;
+//             }
+//         }
+// }
+

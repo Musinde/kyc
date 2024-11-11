@@ -1,0 +1,353 @@
+// 
+// ecommerce.scss
+//
+
+// product
+
+.product-box{
+    border: 2px solid var(--#{$prefix}border-color);
+    position: relative;
+}
+
+.search-box{
+    .form-control{
+        border-radius: 30px;
+        padding-left: 40px;
+    }
+    .search-icon{
+        font-size: 16px;    
+        position: absolute;
+        left: 13px;
+        fill: $gray-600;
+    }
+}
+
+.product-list{
+    li{
+        a{
+            display: block;
+            padding: 4px 0px;
+            color: var(--#{$prefix}body-color);
+        }
+    }
+}
+
+.product-review-link{
+    .list-inline-item{
+        a{
+            color: var(--#{$prefix}body-color);
+            padding: 4px 8px;
+            font-size: 15px;
+        }
+
+    }           
+}
+
+.product-view-nav{
+    &.nav-pills {
+        .nav-item{
+            margin-left: 4px;
+        }
+        .nav-link{
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+            padding: 0;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    }
+}
+
+.product-ribbon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.product-content{
+    position: relative;
+    .product-buy-icon{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+
+// Product Details
+
+
+
+.product-detail{
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        color: $primary;
+        width: 35px;
+        height: 35px;
+        background: rgba($primary, 0.3);
+        border-radius: 50%;
+        &:after{
+           font-size: 20px;
+        }
+    }
+
+    .swiper-button-next{
+        right: 20px;
+    }
+
+    .swiper-button-prev{
+        left: 20px;
+    }
+
+    .nav-slide-item{
+        padding: 0px 10px;
+        img{
+            border: 2px solid transparent;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .swiper-slide-thumb-active{
+        .nav-slide-item{
+            img{
+                border: 2px solid $primary;
+            }
+        }
+    }
+}
+
+.modal-button{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+
+   @media (max-width: 576px) {
+       position: inherit;
+   }
+}
+
+[dir="rtl"]{
+    .modal-button{
+        left: 0;
+        right: auto;
+    }
+}
+
+.product-detail{
+    .nav{
+        .nav-link{
+            margin: 0px 13px;
+            padding: 2px;
+        }
+    }
+}
+
+.product-color{
+    a{
+        display: inline-block;
+        text-align: center;
+        color: var(--#{$prefix}body-color);
+        .product-color-item{
+            margin: 7px;
+        }
+        &.active, &:hover{
+            color: $primary;
+            .product-color-item{
+                border-color: $primary !important;
+            }
+        }
+    }
+}
+
+// ecommerce cart
+
+.visa-card{
+    .visa-logo{
+        line-height: 0.5;
+    }
+
+    .visa-pattern{
+        position: absolute;
+        font-size: 385px;
+        color: rgba($white, 0.05);
+        line-height: 0.4;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+
+
+// checkout
+
+
+/* Activity */
+
+
+.activity-checkout {
+    list-style: none;
+
+    .checkout-icon{
+        position: absolute;
+        top: -4px;
+        left: -24px;
+    }
+
+    .checkout-item {
+        position: relative;
+        padding-bottom: 24px;
+        padding-left: 35px;
+        border-left: 2px solid var(--#{$prefix}body-color);
+        &:first-child {
+            border-color: $primary;
+            &:after {
+                background-color: $primary;
+            }
+        }
+        &:last-child {
+            border-color: transparent;
+        }
+        &.crypto-activity{
+            margin-left: 50px;
+        }
+        .crypto-date{
+            position: absolute;
+            top: 3px;
+            left: -65px;
+        }
+    }
+}
+
+
+.shipping-address{
+    box-shadow: none;
+    &.active{
+        border-color: $primary !important;
+    }
+}
+
+
+.product-tag {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    right: 0;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+    .badge {
+      float: right;
+      transform: rotate(45deg);
+      right: -67px;
+      top: 17px;
+      position: relative;
+      text-align: center;
+      width: 200px;
+      font-size: 13px;
+      margin: 0;
+      padding: 7px 10px;
+      font-weight: 500;
+      color: $primary;
+      background: $white;
+    }
+}
+
+.checkout-tabs{
+    .nav-pills{
+        .nav-link{
+            margin-bottom: 24px;
+            text-align: center;
+            background-color: var(--#{$prefix}secondary-bg);
+            box-shadow: $box-shadow;
+
+            &.active{
+                background-color: $primary;
+            }
+            .check-nav-icon{
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+
+// body[data-bs-theme="dark"] {
+//     .product-detai-imgs{
+//         .nav{
+//             .nav-link{
+//                 &.active{
+//                     background-color: $gray-dark-300;
+//                 }
+//             }
+//         }
+//     } 
+
+//     .product-list{
+//         li{
+//             a{
+//                 color: $gray-dark-800
+//             }
+//         }
+//     }
+    
+    
+//     .checkout-tabs{
+//         .nav-pills{
+//             .nav-link{
+//                 background-color: $gray-dark-300;
+//                 &.active{
+//                     background-color: $primary;
+//                 }
+//             }
+//         }
+//     }
+    
+// }
+
+
+
+// slider
+
+
+.ecommerce-slied-bg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    margin-top: -22px;
+    line-height: 40px;
+    background-color: $primary;
+    text-align: center;
+    font-size: 30px;
+    color: $white;
+    border-radius: 50%;
+}
+
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -22px;
+    line-height: 40px;
+    background-color: $primary;
+    text-align: center;
+    font-size: 30px;
+    color: $white;
+    border-radius: 50%;
+}
